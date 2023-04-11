@@ -13,7 +13,8 @@ class Person
   end
 
   private
-#Added exceptions to fullfill the requirement.
+
+  # Added exceptions to fullfill the requirement.
   def is_of_age? # rubocop:disable Naming/PredicateName
     return true if @age >= 18
 
