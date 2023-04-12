@@ -64,17 +64,16 @@
 
 ## 💻 Getting Started <a name="getting-started"></a>
 
-> Describe how a new developer could make use of your project.
-
 To get a local copy up and running, follow these steps.
 
 ### Prerequisites
 
 In order to run this project you need:
 
-```Git SCM
-```IRB
-
+```
+  Git SCM
+  IRB
+```
 
 ### Setup
 
@@ -105,7 +104,8 @@ To run the project, execute the following command:
 <!--
 Example command:
 
-```irb ./file_name
+```
+irb ./file_name
 
 // or
 
