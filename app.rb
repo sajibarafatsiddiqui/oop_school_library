@@ -97,20 +97,12 @@ class App
       date = gets.chomp
       return if (date = '')
     end
-    print 'Book: '
+    print 'Book(number): '
     book = gets.chomp
-    until book.instance_of?(Book)
-      print 'Please enter a valid book or press enter to exit: '
-      book = gets.chomp
-      return if (book = '')
-    end
-    print 'Book: '
+    book = books[book.to_i]
+    print 'Person(number): '
     person = gets.chomp
-    until person.instance_of?(Person)
-      print 'Please enter a valid person or press enter to exit: '
-      person = gets.chomp
-      return if (person = '')
-    end
+    person = persons[person.to_i]
     rentals.push(Rental.new(date, book, person))
     puts 'New rental has been added successfully'
   end
@@ -123,9 +115,9 @@ class App
     puts "Amount of persons #{persons.length}"
     persons.each_with_index do |p, index|
       if p.instance_of?(::Student)
-        puts "#{index + 1} ID: #{p.id}, Name: #{p.name}, Age: #{p.age}, Classroom: #{p.classroom.label}}"
+        puts "#{index} ID: #{p.id}, Name: #{p.name}, Age: #{p.age}, Classroom: #{p.classroom.label}}"
       else
-        puts "#{index + 1} ID: #{p.id}, Name: #{p.name}, Age: #{p.age}, Specialization: #{p.specialization}"
+        puts "#{index} ID: #{p.id}, Name: #{p.name}, Age: #{p.age}, Specialization: #{p.specialization}"
       end
     end
   end
@@ -137,8 +129,7 @@ class App
     end
     puts "Amount of books #{books.length}"
     books.each_with_index do |b, index|
-      puts b[id]
-      puts "#{index + 1} Title: \"#{b.title}\", Author: #{b.author}"
+      puts "#{index} Title: \"#{b.title}\", Author: #{b.author}"
     end
   end
 
