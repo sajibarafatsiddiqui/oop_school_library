@@ -89,10 +89,10 @@ class App
   end
 
   def create_rental
-    print 'Date: '
+    print 'Date (yyyy-mm-dd): '
     date = gets.chomp
     rgx = /([12]\d{3}-(0[1-9]|1[0-2])-(0[1-9]|[12]\d|3[01]))/
-    until rgx.match?(dt)
+    until rgx.match?(date)
       print 'Please enter a valid date or press enter to exit: '
       date = gets.chomp
       return if (date = '')
@@ -137,6 +137,7 @@ class App
     end
     puts "Amount of books #{books.length}"
     books.each_with_index do |b, index|
+      puts b[id]
       puts "#{index + 1} Title: \"#{b.title}\", Author: #{b.author}"
     end
   end
