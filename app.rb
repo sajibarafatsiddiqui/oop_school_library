@@ -82,7 +82,7 @@ class App
     while author == ''
       print 'Please enter an author or press enter to exit: '
       author = gets.chomp.to_s
-      return if author == ''
+      return if author = ''
     end
     books.push(Book.new(title, author))
     puts 'New book has been added successfully'
