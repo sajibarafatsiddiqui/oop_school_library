@@ -163,7 +163,7 @@ If you like this project please support by giving star.
 
 ## 🙏 Acknowledgments <a name="acknowledgements"></a>
 
-I would like to thank my coding partner Nilton(https://github.com/Nkaleth)
+I would like to thank my coding partner [Nilton](https://github.com/Nkaleth)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
