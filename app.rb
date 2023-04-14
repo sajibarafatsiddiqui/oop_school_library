@@ -123,9 +123,9 @@ class App
     puts "Amount of persons #{persons.length}"
     persons.each_with_index do |p, index|
       if p.instance_of?(::Student)
-        puts "#{index+1} ID: #{p.id}, Name: #{p.name}, Age: #{p.age}, Classroom: #{p.classroom.label}}"
+        puts "#{index + 1} ID: #{p.id}, Name: #{p.name}, Age: #{p.age}, Classroom: #{p.classroom.label}}"
       else
-        puts "#{index+1} ID: #{p.id}, Name: #{p.name}, Age: #{p.age}, Specialization: #{p.specialization}"
+        puts "#{index + 1} ID: #{p.id}, Name: #{p.name}, Age: #{p.age}, Specialization: #{p.specialization}"
       end
     end
   end
@@ -137,7 +137,7 @@ class App
     end
     puts "Amount of books #{books.length}"
     books.each_with_index do |b, index|
-      puts "#{index+1} Title: \"#{b.title}\", Author: #{b.author}"
+      puts "#{index + 1} Title: \"#{b.title}\", Author: #{b.author}"
     end
   end
 
