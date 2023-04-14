@@ -8,14 +8,12 @@
   - [🛠 Built With](#built-with)
     - [Tech Stack](#tech-stack)
     - [Key Features](#key-features)
-  - [🚀 Live Demo](#live-demo)
 - [💻 Getting Started](#getting-started)
   - [Setup](#setup)
   - [Prerequisites](#prerequisites)
   - [Install](#install)
   - [Usage](#usage)
   - [Run tests](#run-tests)
-  - [Deployment](#triangular_flag_on_post-deployment)
 - [👥 Authors](#authors)
 - [🔭 Future Features](#future-features)
 - [🤝 Contributing](#contributing)
@@ -52,11 +50,6 @@
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-<!-- LIVE DEMO -->
-
-## 🚀 Live Demo <a name="live-demo"></a>
-
-- [Will be Added Later]
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -121,10 +114,6 @@ To run tests, run the following command:
  There are no tests configured for this project.
 ```
 
-### Deployment
-
-This project is not deployed
-
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -166,7 +155,7 @@ Feel free to check the [issues page](../../issues/).
 
 > Write a message to encourage readers to support your project
 
-If you like this project...
+If you like this project please support by giving star.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -174,7 +163,7 @@ If you like this project...
 
 ## 🙏 Acknowledgments <a name="acknowledgements"></a>
 
-I would like to thank...
+I would like to thank my coding partner [Nilton](https://github.com/Nkaleth)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -184,9 +173,13 @@ I would like to thank...
 
 > Add at least 2 questions new developers would ask when they decide to use your project.
 
-- **[Question_1]**What is this project main purpose?
+- **[Question_1]**What is the programming language used here to implement OOP ?
 
-  - [Answer_1] To practice Object oriented programming features.
+  - [Answer_1] Ruby
+
+  **[Question_w]**What is the reason behind choosing that language?
+
+  - [Answer_1] Because Ruby is a dynamic, reflective, object-oriented, general-purpose programming language.
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
