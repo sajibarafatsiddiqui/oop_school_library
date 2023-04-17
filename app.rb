@@ -3,6 +3,9 @@ require './teacher'
 require './book'
 require './rental'
 require './person'
+require './book_handler'
+require './person_handler'
+require './rental_handler'
 
 class App
   attr_accessor :persons, :books, :rentals
@@ -12,6 +15,10 @@ class App
     @books = []
     @rentals = []
   end
+
+  include BookHandler
+  include PersonHandler
+  include RentalHandler
 
   def list_persons
     if persons.empty?

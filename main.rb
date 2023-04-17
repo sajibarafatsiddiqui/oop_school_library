@@ -35,13 +35,17 @@ def dispatch_action(option, app)
   end
 end
 
-def main
+def input
   option = 0
   app = App.new
   while option != 7
     option = options
     next unless dispatch_action(option, app)
   end
+end
+
+def main
+  input
 end
 
 main

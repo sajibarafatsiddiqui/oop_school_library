@@ -1,4 +1,4 @@
-module CreateRental
+module RentalHandler
   def create_rental
     print 'Date (yyyy-mm-dd): '
     date = gets.chomp
