@@ -3,6 +3,9 @@ require './teacher'
 require './book'
 require './rental'
 require './person'
+require './book_handler'
+require './person_handler'
+require './rental_handler'
 
 class App
   attr_accessor :persons, :books, :rentals
@@ -13,99 +16,9 @@ class App
     @rentals = []
   end
 
-  def create_person
-    puts '1) Create a Student 2) Create a Teacher'
-    puts 'Please select the Person type:'
-    type = gets.chomp.to_i
-    until type.between?(1, 2)
-      puts 'Please type 1 or 2 or press enter to exit:'
-      type = gets.chomp.to_i
-      return if type == ''
-    end
-    print 'Name: '
-    name = gets.chomp.to_s
-    while name == ''
-      print 'Please enter a name or press enter to exit: '
-      name = gets.chomp.to_s
-      return if name == ''
-    end
-
-    type == 1 ? create_student(name) : create_teacher(name)
-  end
-
-  def create_student(name)
-    print 'Age: '
-    age = gets.chomp.to_i
-    until age.integer?
-      print 'Please enter a number or press enter to exit: '
-      return if age == ''
-    end
-    print 'Classroom: '
-    classroom = gets.chomp.to_s
-    while classroom == ''
-      print 'Please enter a classroom or press enter to exit: '
-      classroom = gets.chomp.to_s
-      return if classroom == ''
-    end
-    persons.push(Student.new(classroom, age, name))
-    puts 'New Student has created successfully!'
-  end
-
-  def create_teacher(name)
-    print 'Age: '
-    age = gets.chomp.to_i
-    until age.integer?
-      print 'Please enter a number or press enter to exit: '
-      return if age == ''
-    end
-    print 'Specification: '
-    specification = gets.chomp.to_s
-    while specification == ''
-      print 'Please enter a specification or press enter to exit: '
-      specification = gets.chomp.to_s
-      return if specification == ''
-    end
-    persons.push(Teacher.new(specification, age, name))
-    puts 'New Teacher has been created successfully!'
-  end
-
-  def create_book
-    print 'Title: '
-    title = gets.chomp.to_s
-    while title == ''
-      print 'Please enter a title or press enter to exit: '
-      title = gets.chomp.to_s
-      return if title == ''
-    end
-    print 'Auhtor: '
-    author = gets.chomp.to_s
-    while author == ''
-      print 'Please enter an author or press enter to exit: '
-      author = gets.chomp.to_s
-      return if author == ''
-    end
-    books.push(Book.new(title, author))
-    puts 'New book has been added successfully'
-  end
-
-  def create_rental
-    print 'Date (yyyy-mm-dd): '
-    date = gets.chomp
-    rgx = /([12]\d{3}-(0[1-9]|1[0-2])-(0[1-9]|[12]\d|3[01]))/
-    until rgx.match?(date)
-      print 'Please enter a valid date or press enter to exit: '
-      date = gets.chomp
-      return if (date = '')
-    end
-    print 'Book(number): '
-    book = gets.chomp
-    book = books[book.to_i]
-    print 'Person(number): '
-    person = gets.chomp
-    person = persons[person.to_i]
-    rentals.push(Rental.new(date, book, person))
-    puts 'New rental has been added successfully'
-  end
+  include BookHandler
+  include PersonHandler
+  include RentalHandler
 
   def list_persons
     if persons.empty?

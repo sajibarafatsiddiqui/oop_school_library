@@ -126,6 +126,10 @@ To run tests, run the following command:
 
 - GitHub: [@githubhandle](https://github.com/sajibarafatsiddiqui)
 
+👤 **Ashmal Zahra**
+
+- GitHub: [@githubhandle](https://github.com/ashmalzahra)
+
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
